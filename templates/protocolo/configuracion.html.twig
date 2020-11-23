@@ -1,1 +1,9 @@
-<h1>Your lucky number is {{ number }}</h1>
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Usuario logeado.</h1>
+    <br>
+    <h2>Token bonita: {{ number }}</h2>
+
+    <a href="{{ path('protocolo_index') }}">ASD</a>
+{% endblock %}

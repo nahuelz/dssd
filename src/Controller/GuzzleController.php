@@ -59,15 +59,7 @@ class GuzzleController extends AbstractController
                 [
                     'headers' => [
                         'X-Bonita-API-Token' => static::$token
-                    ],
-                    'json' => [
-                        'contratoCliente' => [
-                            'dni' => $data['dni'],
-                            'nombre' => $data['nombre'],
-                            'edad' => $data['edad']
-                        ],
                     ]
-
                 ]);
 
         } catch (RequestException $e) {
@@ -79,5 +71,7 @@ class GuzzleController extends AbstractController
 
             return $error;
         }
+
+        return $request;
     }
 }
