@@ -5,12 +5,12 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Usuario
+ * AppUsers
  *
- * @ORM\Table(name="usuario", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_2265B05DF85E0677", columns={"username"}), @ORM\UniqueConstraint(name="UNIQ_2265B05DE7927C74", columns={"email"})})
+ * @ORM\Table(name="app_users", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_C2502824F85E0677", columns={"username"}), @ORM\UniqueConstraint(name="UNIQ_C2502824E7927C74", columns={"email"})})
  * @ORM\Entity
  */
-class Usuario
+class AppUsers
 {
     /**
      * @var int
@@ -48,13 +48,6 @@ class Usuario
      * @ORM\Column(name="is_active", type="boolean", nullable=false)
      */
     private $isActive;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="roles", type="string", length=255, nullable=false)
-     */
-    private $roles;
 
     public function getId(): ?int
     {
@@ -105,18 +98,6 @@ class Usuario
     public function setIsActive(bool $isActive): self
     {
         $this->isActive = $isActive;
-
-        return $this;
-    }
-
-    public function getRoles(): ?string
-    {
-        return $this->roles;
-    }
-
-    public function setRoles(string $roles): self
-    {
-        $this->roles = $roles;
 
         return $this;
     }
