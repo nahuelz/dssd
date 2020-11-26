@@ -53,7 +53,7 @@ class Usuario implements UserInterface, \Serializable
     /**
      * @var string
      *
-     * @ORM\Column(name="roles", type="string", length=255, nullable=false)
+     * @ORM\Column(name="roles", type="string", length=255, nullable=true)
      */
     private $roles;
 

@@ -92,6 +92,8 @@ class Protocolos
      */
     private $idActividad;
 
+    private $idTarea;
+
     /**
      * Constructor
      */
@@ -226,6 +228,16 @@ class Protocolos
         }
 
         return $this;
+    }
+
+    public function setIdTarea($idTarea){
+        $this->idTarea = $idTarea;
+
+        return $this;
+    }
+
+    public function getIdTarea(){
+        return $this->idTarea;
     }
 
 }
